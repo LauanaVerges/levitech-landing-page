@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LeviTech — assistência técnica, acessórios, impressão 3D, personalização e produtos geek."
+    />
+    <title>LeviTech | Tecnologia, assistência e impressão 3D</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ícones do Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Efeito decorativo de fundo -->
+    <div class="background-glow background-glow--top" aria-hidden="true"></div>
+    <div class="background-grid" aria-hidden="true"></div>
+
+    <!-- Cabeçalho e navegação -->
+    <header id="cabecalho" class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#inicio" aria-label="LeviTech - Página inicial">
+          <img
+            class="brand-logo"
+            src="assets/logo-levitech.png"
+            alt="Logo LeviTech"
+          />
+        </a>
+
+        <button
+          id="botao-menu"
+          class="menu-button"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav
+          id="menu-principal"
+          class="main-nav"
+          aria-label="Navegação principal"
+        >
+          <a class="nav-link active" href="#inicio">Início</a>
+          <a class="nav-link" href="#assistencia">Assistência Técnica</a>
+          <a class="nav-link" href="#categorias">Acessórios</a>
+          <a class="nav-link" href="#categorias">Impressão 3D</a>
+          <a class="nav-link" href="#categorias">Produtos Geek</a>
+          <a class="nav-link" href="#sobre">Sobre Nós</a>
+          <a class="nav-link" href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            id="botao-busca"
+            class="icon-button"
+            type="button"
+            aria-label="Pesquisar"
+          >
+            <i data-lucide="search"></i>
+          </button>
+          <button
+            class="icon-button cart-button"
+            type="button"
+            aria-label="Carrinho de compras"
+          >
+            <i data-lucide="shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </button>
+          <a class="button button--small button--primary" href="#contato"
+            >Orçamento <i data-lucide="message-circle"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Caixa de busca exibida pelo JavaScript -->
+      <div id="caixa-busca" class="search-panel" hidden>
+        <div class="container search-panel-content">
+          <i data-lucide="search"></i>
+          <input
+            id="campo-busca"
+            type="search"
+            placeholder="Busque por serviços ou produtos..."
+            aria-label="Campo de busca"
+          />
+          <button
+            id="fechar-busca"
+            class="icon-button"
+            type="button"
+            aria-label="Fechar busca"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Seção principal / Hero -->
+      <section id="inicio" class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content reveal">
+            <span class="section-kicker"
+              >Tecnologia. Qualidade. Confiança.</span
+            >
+            <h1>Soluções que <span>conectam você</span></h1>
+            <p class="hero-description">
+              Assistência técnica especializada em informática e celulares,
+              venda de acessórios, impressão 3D e produtos geeks.
+            </p>
+
+            <div class="hero-benefits" aria-label="Diferenciais da LeviTech">
+              <div class="benefit-item">
+                <i data-lucide="users"></i
+                ><span>Profissionais<br />especializados</span>
+              </div>
+              <div class="benefit-item">
+                <i data-lucide="badge-check"></i
+                ><span>Peças de<br />qualidade</span>
+              </div>
+              <div class="benefit-item">
+                <i data-lucide="shield-check"></i
+                ><span>Garantia em<br />todos os serviços</span>
+              </div>
+              <div class="benefit-item">
+                <i data-lucide="clock-3"></i
+                ><span>Atendimento<br />rápido e seguro</span>
+              </div>
+            </div>
+
+            <div class="hero-buttons">
+              <a
+                class="button button--primary"
+                href="https://wa.me/5543999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i data-lucide="message-circle"></i> Fale no WhatsApp</a
+              >
+              <a class="button button--outline" href="#assistencia"
+                >Ver serviços <i data-lucide="arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-orbit hero-orbit--one" aria-hidden="true"></div>
+            <div class="hero-orbit hero-orbit--two" aria-hidden="true"></div>
+            <div class="hero-device hero-device--phone">
+              <i data-lucide="smartphone"></i><span class="crack-line"></span>
+            </div>
+            <div class="hero-device hero-device--printer">
+              <i data-lucide="box"></i><span>3D</span>
+            </div>
+            <img
+              class="hero-mascot"
+              src="assets/mascote-levitech.png"
+              alt="Mascote raposa azul da LeviTech segurando uma chave de fenda e um notebook"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Serviços de assistência técnica -->
+      <section id="assistencia" class="section section-panel">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <span class="section-kicker">Assistência técnica</span>
+              <h2>Soluções para o seu dia a dia</h2>
+            </div>
+            <a class="button button--outline button--small" href="#contato"
+              >Ver todos os serviços <i data-lucide="arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="service-grid">
+            <article class="info-card reveal">
+              <div class="card-icon"><i data-lucide="laptop"></i></div>
+              <h3>Informática</h3>
+              <p>
+                Formatação, limpeza, upgrade, remoção de vírus, troca de peças e
+                muito mais.
+              </p>
+              <a href="#contato"
+                >Saiba mais <i data-lucide="arrow-right"></i
+              ></a>
+            </article>
+            <article class="info-card reveal">
+              <div class="card-icon"><i data-lucide="smartphone"></i></div>
+              <h3>Celulares</h3>
+              <p>
+                Troca de tela, bateria, conector de carga e reparos em geral com
+                garantia.
+              </p>
+              <a href="#contato"
+                >Saiba mais <i data-lucide="arrow-right"></i
+              ></a>
+            </article>
+            <article class="info-card reveal">
+              <div class="card-icon"><i data-lucide="wifi"></i></div>
+              <h3>Redes e Software</h3>
+              <p>
+                Configuração de redes, roteadores, backup, instalação de
+                programas e sistemas.
+              </p>
+              <a href="#contato"
+                >Saiba mais <i data-lucide="arrow-right"></i
+              ></a>
+            </article>
+            <article class="info-card info-card--highlight reveal">
+              <div class="card-icon"><i data-lucide="clipboard-list"></i></div>
+              <h3>Orçamento rápido</h3>
+              <p>
+                Fale com a nossa equipe e receba uma avaliação inicial sem
+                compromisso.
+              </p>
+              <a href="#contato"
+                >Solicitar agora <i data-lucide="arrow-right"></i
+              ></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categorias da loja -->
+      <section id="categorias" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <span class="section-kicker">Nossas categorias</span>
+              <h2>Muito mais que assistência técnica</h2>
+            </div>
+          </div>
+
+          <div class="category-grid">
+            <article class="category-card category-card--accessories reveal">
+              <div class="category-art"><i data-lucide="headphones"></i></div>
+              <div class="category-content">
+                <h3>Acessórios</h3>
+                <p>Headsets, teclados, mouses, carregadores e muito mais.</p>
+                <a href="#produtos"
+                  >Ver produtos <i data-lucide="arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="category-card category-card--print reveal">
+              <div class="category-art"><i data-lucide="cuboid"></i></div>
+              <div class="category-content">
+                <h3>Impressão 3D</h3>
+                <p>
+                  Peças personalizadas, protótipos, decoração e projetos únicos.
+                </p>
+                <a href="#contato"
+                  >Ver serviços <i data-lucide="arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="category-card category-card--geek reveal">
+              <div class="category-art"><i data-lucide="gamepad-2"></i></div>
+              <div class="category-content">
+                <h3>Produtos Geek</h3>
+                <p>
+                  Figures, chaveiros, luminárias, canecas, posters e muito mais.
+                </p>
+                <a href="#produtos"
+                  >Ver coleção <i data-lucide="arrow-right"></i
+                ></a>
+              </div>
+            </article>
+            <article class="category-card category-card--custom reveal">
+              <div class="category-art">
+                <i data-lucide="wand-sparkles"></i>
+              </div>
+              <div class="category-content">
+                <h3>Personalização</h3>
+                <p>
+                  Personalizamos canecas, placas, chaveiros, presentes e
+                  projetos.
+                </p>
+                <a href="#contato"
+                  >Personalizar <i data-lucide="arrow-right"></i
+                ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Produtos em destaque -->
+      <section id="produtos" class="section section-products">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <span class="section-kicker">Destaques</span>
+              <h2>Produtos em alta</h2>
+            </div>
+            <div class="carousel-controls">
+              <button
+                id="produto-anterior"
+                class="icon-button"
+                type="button"
+                aria-label="Produtos anteriores"
+              >
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button
+                id="produto-proximo"
+                class="icon-button"
+                type="button"
+                aria-label="Próximos produtos"
+              >
+                <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="lista-produtos" class="product-row">
+            <article class="product-card">
+              <div class="product-image">
+                <i data-lucide="headphones"></i
+                ><span class="product-badge">-10%</span>
+              </div>
+              <h3>Headset Gamer RGB</h3>
+              <p class="product-price">R$ 199,90</p>
+              <button
+                class="add-cart"
+                type="button"
+                data-product="Headset Gamer RGB"
+              >
+                <i data-lucide="shopping-cart"></i>
+              </button>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><i data-lucide="keyboard"></i></div>
+              <h3>Teclado Mecânico 60%</h3>
+              <p class="product-price">R$ 299,90</p>
+              <button
+                class="add-cart"
+                type="button"
+                data-product="Teclado Mecânico 60%"
+              >
+                <i data-lucide="shopping-cart"></i>
+              </button>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><i data-lucide="key-round"></i></div>
+              <h3>Chaveiro Geek 3D</h3>
+              <p class="product-price">R$ 24,90</p>
+              <button
+                class="add-cart"
+                type="button"
+                data-product="Chaveiro Geek 3D"
+              >
+                <i data-lucide="shopping-cart"></i>
+              </button>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><i data-lucide="lamp-desk"></i></div>
+              <h3>Luminária LED Geek</h3>
+              <p class="product-price">R$ 89,90</p>
+              <button
+                class="add-cart"
+                type="button"
+                data-product="Luminária LED Geek"
+              >
+                <i data-lucide="shopping-cart"></i>
+              </button>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><i data-lucide="smartphone"></i></div>
+              <h3>Suporte para Celular 3D</h3>
+              <p class="product-price">R$ 49,90</p>
+              <button
+                class="add-cart"
+                type="button"
+                data-product="Suporte para Celular 3D"
+              >
+                <i data-lucide="shopping-cart"></i>
+              </button>
+            </article>
+            <article class="product-card">
+              <div class="product-image"><i data-lucide="coffee"></i></div>
+              <h3>Caneca Personalizada</h3>
+              <p class="product-price">R$ 39,90</p>
+              <button
+                class="add-cart"
+                type="button"
+                data-product="Caneca Personalizada"
+              >
+                <i data-lucide="shopping-cart"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faixa de diferenciais -->
+      <section class="benefits-strip">
+        <div class="container benefits-strip-grid">
+          <div>
+            <i data-lucide="shield-check"></i
+            ><span><strong>Pagamento seguro</strong>Seus dados protegidos</span>
+          </div>
+          <div>
+            <i data-lucide="truck"></i
+            ><span><strong>Entrega rápida</strong>Para todo o Brasil</span>
+          </div>
+          <div>
+            <i data-lucide="badge-check"></i
+            ><span
+              ><strong>Garantia LeviTech</strong>Serviços e produtos com
+              garantia</span
+            >
+          </div>
+          <div>
+            <i data-lucide="messages-square"></i
+            ><span><strong>Atendimento top</strong>Suporte via WhatsApp</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre e contato rápido -->
+      <section id="sobre" class="section about-section">
+        <div class="container about-grid">
+          <div class="about-content reveal">
+            <span class="section-kicker">Sobre a LeviTech</span>
+            <h2>Tecnologia com atendimento próximo e soluções criativas.</h2>
+            <p>
+              Unimos assistência técnica, produtos selecionados, impressão 3D e
+              personalização em um só lugar. Nosso objetivo é resolver problemas
+              e transformar ideias em projetos reais.
+            </p>
+            <a class="button button--outline" href="#contato"
+              >Conheça a empresa <i data-lucide="arrow-right"></i
+            ></a>
+          </div>
+          <div class="about-card reveal">
+            <div class="about-stat">
+              <strong>+500</strong><span>atendimentos realizados</span>
+            </div>
+            <div class="about-stat">
+              <strong>4 áreas</strong><span>de atuação integradas</span>
+            </div>
+            <div class="about-stat">
+              <strong>100%</strong><span>foco em qualidade</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-levitech.png" alt="Logo LeviTech" />
+          <p>Tecnologia que conecta soluções ao que realmente importa: você.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"
+              ><i data-lucide="instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Navegue</h3>
+          <a href="#inicio">Início</a
+          ><a href="#assistencia">Assistência Técnica</a
+          ><a href="#categorias">Acessórios</a
+          ><a href="#categorias">Impressão 3D</a
+          ><a href="#produtos">Produtos Geek</a>
+        </div>
+        <div class="footer-column">
+          <h3>Informações</h3>
+          <a href="#">Política de Privacidade</a
+          ><a href="#">Trocas e Devoluções</a><a href="#">Formas de Pagamento</a
+          ><a href="#">Perguntas Frequentes</a>
+        </div>
+        <div class="footer-column">
+          <h3>Fale conosco</h3>
+          <p><i data-lucide="message-circle"></i> (43) 99999-9999</p>
+          <p><i data-lucide="instagram"></i> @levitech.oficial</p>
+          <p><i data-lucide="mail"></i> contato@levitech.com.br</p>
+          <p><i data-lucide="clock-3"></i> Seg. a Sex.: 09h às 18h</p>
+        </div>
+
+        <div class="whatsapp-card">
+          <i data-lucide="headset"></i>
+          <div>
+            <span>Precisa de ajuda?</span>
+            <p>Chame no WhatsApp e fale com a nossa equipe.</p>
+          </div>
+          <a
+            class="button button--primary button--small"
+            href="https://wa.me/5543999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Iniciar conversa</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="ano-atual"></span> LeviTech. Todos os direitos
+          reservados.</span
+        ><span>Desenvolvido com tecnologia e criatividade.</span>
+      </div>
+    </footer>
+
+    <!-- Aviso simples do carrinho -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- JavaScript principal -->
+    <script src="script.js"></script>
+  </body>
+</html>
